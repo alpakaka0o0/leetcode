@@ -4,10 +4,13 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        str_x = str(x)
-        reverse_x = "".join(reversed(list(str_x)))
-        print(reverse_x)
-        if reverse_x != str_x:
+        if x < 0 :
             return False
-        return True
-        
+        reversed_num = 0
+        temp = x
+        while temp != 0:
+            digit = temp % 10
+            reversed_num = reversed_num * 10 + digit
+            temp //= 10
+
+        return reversed_num == x
