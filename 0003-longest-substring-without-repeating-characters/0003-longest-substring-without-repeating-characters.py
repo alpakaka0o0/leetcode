@@ -16,7 +16,7 @@ class Solution(object):
             else:
                 while s[right] in charSet:
                     charSet.remove(s[left])
-                    left += 1
+                    left+=1
                 charSet.add(s[right])
 
         return maxLength
