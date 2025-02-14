@@ -6,16 +6,16 @@ class Solution {
         boolean firstRowHasZero = false;
         boolean firstColHasZero = false;
 
-        for (int r = 0; r < rows; r++){
-            if (matrix[r][0] == 0){
-                firstColHasZero = true;
+        for (int c = 0; c < cols; c++) {
+            if (matrix[0][c] == 0) {
+                firstRowHasZero = true;
                 break;
             }
         }
 
-        for (int c = 0; c < cols; c++){
-            if (matrix[0][c] == 0){
-                firstRowHasZero = true;
+        for (int r = 0; r < rows; r++) {
+            if (matrix[r][0] == 0) {
+                firstColHasZero = true;
                 break;
             }
         }
