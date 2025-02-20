@@ -6,7 +6,6 @@ class Solution {
 
         for (int i = 0; i < directories.length; i++){
             if (directories[i].equals("..")){
-                System.out.println("it dots");
                 if (pathStack.size() > 0) {
                     pathStack.pop();
                 }
