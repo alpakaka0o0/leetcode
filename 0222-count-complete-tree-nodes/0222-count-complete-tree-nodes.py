@@ -10,7 +10,18 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: int
         """
-        if root is None:
+        if not root:
+            return 0 
+
+        leftDepth = self.getDepth(root.left)
+        rightDepth = self.getDepth(root.right)
+        if leftDepth == rightDepth:
+            return pow(2, leftDepth ) + self.countNodes(root.right)
+        else:
+            return pow(2, rightDepth) + self.countNodes(root.left)
+
+    def getDepth(self, root):
+        if not root:
             return 0
-        return self.countNodes(root.left) + self.countNodes(root.right) + 1
+        return 1 + self.getDepth(root.left)
         
